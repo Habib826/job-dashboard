@@ -3,6 +3,7 @@ import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from "../firebase.config"
 import './Login.css'
+import { Link } from 'react-router-dom';
 
 firebase.initializeApp(firebaseConfig);
 const Login = () => {
@@ -62,7 +63,8 @@ const Login = () => {
                                 </div>
                                 <div className="row mb-3 px-3"> <button type="submit" className="btn btn-blue text-center">Login</button> </div>
                                 <div className="row mb-4 px-3">
-                                    <small className="font-weight-bold"> Don't have an account? <a className="text-danger" href="/register">Register</a></small>
+                                    <small className="font-weight-bold"> Don't have an account? <Link to="/register" className="text-danger
+                                    ">Register</Link> your account</small>
                                 </div>
                             </div>
                         </div>

@@ -25,11 +25,20 @@ const TopNavbar = () => {
                 <div className="col-md-3">
                     <div id="mySidenav" className="sidenav">
                         <Link to="#" onClick={closeNav}>&times;</Link>
-                        <Link to="/client-dashboard"> <i className="fas fa-th-large"></i> Dashboard</Link>
+                        <Link to="/client-dashboard"> <i className="fas fa-th-large"></i>Client Dashboard</Link>
                         <Link to="/client-jobs"> <i className="fas fa-briefcase"></i> Jobs</Link>
                         <Link to="/candidates"> <i className="fas fa-user"></i> Candidates</Link>
                         <Link to="/approval"> <i className="fas fa-user-check"></i> Approval</Link>
                         <Link to="/reports"> <i className="fas fa-chart-line"></i> Report</Link>
+                        <p className="text-white">Candidate Menu</p>
+                        <Link to="/candidate-dashboard">Candidate Dashboard</Link>
+                        <Link to="/resume">Resume</Link>
+                        <Link to="/interview">Interview</Link>
+                        <Link to="/offers">Offer</Link>
+                        <p>Jobs</p>
+                        <Link to="/applied-jobs">Applied Jobs</Link>
+                        <Link to="/map-jobs">Map Jobs</Link>
+                        <Link to="/live-jobs">Live Jobs</Link>
                     </div>
 
                     <div className="d-flex align-items-center">
