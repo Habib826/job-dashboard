@@ -13,8 +13,8 @@ const Login = () => {
         firebase.auth()
             .signInWithPopup(provider)
             .then((result) => {
-                const credential = result.credential;
-                const token = credential.accessToken;
+                // const credential = result.credential;
+                // const token = credential.accessToken;
                 const { displayName, email } = result.user;
                 console.log(displayName, email);
             })
