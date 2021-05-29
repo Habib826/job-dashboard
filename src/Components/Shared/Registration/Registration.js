@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import { Link } from 'react-router-dom';
 
 const Registration = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -94,6 +95,9 @@ const Registration = () => {
                         </div>
                     </form>
                 </div>
+            </div>
+            <div className="row">
+                <p className="text-center">Already have an account? <Link to="/"><span className="text-danger">Login Here</span></Link></p>
             </div>
         </div>
     );

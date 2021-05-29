@@ -1,8 +1,28 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import firebase from "firebase/app";
+import "firebase/auth";
+import firebaseConfig from "../firebase.config"
 import './Login.css'
+import { Link } from 'react-router-dom';
 
+firebase.initializeApp(firebaseConfig);
 const Login = () => {
+    //sign in with google
+    const provider = new firebase.auth.GoogleAuthProvider();
+    const handleGoogleSignIn = () => {
+        firebase.auth()
+            .signInWithPopup(provider)
+            .then((result) => {
+                // const credential = result.credential;
+                // const token = credential.accessToken;
+                const { displayName, email } = result.user;
+                console.log(displayName, email);
+            })
+            .catch(err => {
+                console.log(err.message)
+            })
+    }
+
     return (
         <section className="login">
             <div className="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
@@ -18,9 +38,9 @@ const Login = () => {
                                 <div className="row mb-4 px-3">
                                     <h6 className="mb-0 mr-4 mt-2">Sign in with</h6>
                                     <div className="facebook text-center mr-3">
-                                        <div className="fab fa-google"></div>
+                                        <div onClick={handleGoogleSignIn} className="fab fa-google"></div>
                                     </div>
-                                    
+
                                 </div>
                                 <div className="row px-3 mb-4">
                                     <div className="line"></div> <small className="or text-center">Or</small>
