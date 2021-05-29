@@ -9,6 +9,7 @@ import ClientJob from './Components/ClientDashboard/ClientJob/ClientJob';
 import TopNavbar from './Components/ClientDashboard/TopNavbar/TopNavbar';
 import Login from './Components/Shared/Login/Login';
 import NotFound from './Components/Shared/NotFound/NotFound';
+import Registration from './Components/Shared/Registration/Registration';
 function App() {
   return (
     <Router>
@@ -22,6 +23,9 @@ function App() {
         </Route>
         <Route path="/client-jobs">
           <ClientJob></ClientJob>
+        </Route>
+        <Route path="/register">
+          <Registration></Registration>
         </Route>
         <Route path="*">
           <NotFound/>
