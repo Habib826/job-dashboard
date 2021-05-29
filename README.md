@@ -1,1 +1,1 @@
-server code and api link - https://github.com/ataur39n-sharif/jobsBoard-server
+server github code - https://github.com/ataur39n-sharif/jobsBoard-server
