@@ -32,10 +32,6 @@ function App() {
         <Route path="/register">
           <Registration></Registration>
         </Route>
-<<<<<<< HEAD
-        <Route path="/contact">
-          <Contact></Contact>
-=======
         <Route path="/candidate-dashboard">
           <CandidateDashboard></CandidateDashboard>
         </Route>
@@ -47,7 +43,6 @@ function App() {
         </Route>
         <Route path="/job-offers">
           <JobOffer></JobOffer>
->>>>>>> nahid
         </Route>
         <Route path="*">
           <NotFound />
