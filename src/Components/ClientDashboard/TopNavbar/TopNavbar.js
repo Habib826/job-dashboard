@@ -36,7 +36,7 @@ const TopNavbar = () => {
                             <Link to="/candidate-dashboard">Candidate Dashboard</Link>
                             <Link to="/resume">Resume</Link>
                             <Link to="/interview">Interview</Link>
-                            <Link to="/offers">Offer</Link>
+                            <Link to="/job-offers">Offer</Link>
                             <p>Jobs</p>
                             <Link to="/applied-jobs">Applied Jobs</Link>
                             <Link to="/map-jobs">Map Jobs</Link>

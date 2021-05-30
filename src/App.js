@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import AppliedJobs from './Components/CandidateDashboard/AppliedJobs/AppliedJobs';
 import CandidateDashboard from './Components/CandidateDashboard/CandidateDashboard/CandidateDashboard';
+import JobOffer from './Components/CandidateDashboard/JobOffer/JobOffer';
 import ClientDashboard from './Components/ClientDashboard/ClientDashboard/ClientDashboard';
 import ClientJob from './Components/ClientDashboard/ClientJob/ClientJob';
 import PostJob from './Components/ClientDashboard/PostJob/PostJob';
@@ -38,6 +39,9 @@ function App() {
         </Route>
         <Route path="/post-job">
           <PostJob></PostJob>
+        </Route>
+        <Route path="/job-offers">
+          <JobOffer></JobOffer>
         </Route>
         <Route path="*">
           <NotFound/>
