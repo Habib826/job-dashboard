@@ -3,7 +3,18 @@ import { useForm } from "react-hook-form";
 
 const PostJob = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = data => {
+        console.log(data);
+        fetch(`http://localhost:5000/addJob`,{
+            method: 'POST',
+            headers: {'content-type': 'application/json'},
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data =>{
+            console.log(data);
+        })
+    }
     return (
         <div className="container mt-5">
             <div className="row justify-content-center">
@@ -20,7 +31,7 @@ const PostJob = () => {
                         <input {...register("company", { required: true })} type="text" placeholder="Enter your company name" />
                         {/* errors will return when field validation fails  */}
                         {errors.exampleRequired && <span>This field is required</span>}
-                        <input {...register("description", { required: true })} type="text" placeholder="Enterjob description" />
+                        <textarea {...register("description", { required: true })} type="text" placeholder="Enterjob description" />
                         {/* errors will return when field validation fails  */}
                         {errors.exampleRequired && <span>This field is required</span>}
                         <input type="submit" className="btn btn-primary"/>
