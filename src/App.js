@@ -4,6 +4,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import CandidateDashboard from './Components/CandidateDashboard/CandidateDashboard/CandidateDashboard';
 import ClientDashboard from './Components/ClientDashboard/ClientDashboard/ClientDashboard';
 import ClientJob from './Components/ClientDashboard/ClientJob/ClientJob';
 import TopNavbar from './Components/ClientDashboard/TopNavbar/TopNavbar';
@@ -26,6 +27,9 @@ function App() {
         </Route>
         <Route path="/register">
           <Registration></Registration>
+        </Route>
+        <Route path="/candidate-dashboard">
+          <CandidateDashboard></CandidateDashboard>
         </Route>
         <Route path="*">
           <NotFound/>
