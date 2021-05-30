@@ -4,9 +4,46 @@ import "firebase/auth";
 import firebaseConfig from "../firebase.config"
 import './Login.css'
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
-firebase.initializeApp(firebaseConfig);
+if (!firebase.apps.length) {
+    firebase.initializeApp(firebaseConfig);
+} else {
+    firebase.app();
+}
+
 const Login = () => {
+
+    const [change, setChange] = useState()
+
+    const changeData =() => {
+        const data ={
+            email: document.getElementById('email')?.value,
+            password: document.getElementById('password')?.value
+        }
+
+        setChange(data)
+    }
+
+    const handleSubmit = () => {
+        // console.log(document.getElementById('password').value);
+        // console.log(document.getElementById('email').value);
+console.log(change);
+        firebase.auth().signInWithEmailAndPassword(change.email, change.password)
+            .then((userCredential) => {
+                // Signed in
+                var user = userCredential.user;
+                console.log(user);
+                // ...
+            })
+            .catch((error) => {
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                console.log(errorMessage);
+            });
+    }
+
+
     //sign in with google
     const provider = new firebase.auth.GoogleAuthProvider();
     const handleGoogleSignIn = () => {
@@ -49,19 +86,21 @@ const Login = () => {
                                 <div className="row px-3">
                                     <label className="mb-1">
                                         <h6 className="mb-0 text-sm">Email Address</h6>
-                                    </label> <input className="mb-4" type="text" name="email" placeholder="Enter a valid email address" />
+                                    </label>
+                                    <input onChange={() =>changeData()} className="mb-4" type="text" id="email" name="email" placeholder="Enter a valid email address" />
                                 </div>
                                 <div className="row px-3">
                                     <label className="mb-1">
                                         <h6 className="mb-0 text-sm">Password</h6>
-                                    </label> <input type="password" name="password" placeholder="Enter password" /> </div>
+                                    </label>
+                                    <input onChange={() =>changeData()} type="password" name="password" id="password" placeholder="Enter password" /> </div>
                                 <div className="row px-3 mb-4">
                                     <div className="custom-control custom-checkbox custom-control-inline">
                                         <input id="chk1" type="checkbox" name="chk" className="custom-control-input" />
                                         <label htmlFor="chk1" className="custom-control-label text-sm">Remember me</label>
                                     </div>
                                 </div>
-                                <div className="row mb-3 px-3"> <button type="submit" className="btn btn-blue text-center">Login</button> </div>
+                                <div className="row mb-3 px-3"> <button onClick={() => handleSubmit()} type="submit" className="btn btn-blue text-center">Login</button> </div>
                                 <div className="row mb-4 px-3">
                                     <small className="font-weight-bold"> Don't have an account? <Link to="/register" className="text-danger
                                     ">Register</Link> your account</small>

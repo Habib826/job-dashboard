@@ -44,6 +44,9 @@ function App() {
         <Route path="/job-offers">
           <JobOffer></JobOffer>
         </Route>
+        <Route path="/contact">
+          <Contact></Contact>
+        </Route>
         <Route path="*">
           <NotFound />
         </Route>
