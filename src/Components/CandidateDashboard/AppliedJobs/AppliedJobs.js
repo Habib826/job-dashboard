@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../../../images/job board.png'
+import logo from '../../../images/job board.png'
 import AppliedJobDetails from '../AppliedJobDetails/AppliedJobDetails'
 const AppliedJobs = () => {
     const candidateJobs = [

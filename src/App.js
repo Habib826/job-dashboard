@@ -4,8 +4,8 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import AppliedJobs from './Components/CandidateDashboard/AppliedJobs/AppliedJobs';
 import CandidateDashboard from './Components/CandidateDashboard/CandidateDashboard/CandidateDashboard';
-import AppliedJobs from './Components/CandidateDashboard/CandidateDashboard/AppliedJobs/AppliedJobs';
 import ClientDashboard from './Components/ClientDashboard/ClientDashboard/ClientDashboard';
 import ClientJob from './Components/ClientDashboard/ClientJob/ClientJob';
 import TopNavbar from './Components/ClientDashboard/TopNavbar/TopNavbar';
