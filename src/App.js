@@ -4,8 +4,12 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import AppliedJobs from './Components/CandidateDashboard/AppliedJobs/AppliedJobs';
+import CandidateDashboard from './Components/CandidateDashboard/CandidateDashboard/CandidateDashboard';
+import JobOffer from './Components/CandidateDashboard/JobOffer/JobOffer';
 import ClientDashboard from './Components/ClientDashboard/ClientDashboard/ClientDashboard';
 import ClientJob from './Components/ClientDashboard/ClientJob/ClientJob';
+import PostJob from './Components/ClientDashboard/PostJob/PostJob';
 import TopNavbar from './Components/ClientDashboard/TopNavbar/TopNavbar';
 import Contact from './Components/Shared/Contatact/Contact';
 import Login from './Components/Shared/Login/Login';
@@ -28,8 +32,22 @@ function App() {
         <Route path="/register">
           <Registration></Registration>
         </Route>
+<<<<<<< HEAD
         <Route path="/contact">
           <Contact></Contact>
+=======
+        <Route path="/candidate-dashboard">
+          <CandidateDashboard></CandidateDashboard>
+        </Route>
+        <Route path="/applied-jobs">
+          <AppliedJobs></AppliedJobs>
+        </Route>
+        <Route path="/post-job">
+          <PostJob></PostJob>
+        </Route>
+        <Route path="/job-offers">
+          <JobOffer></JobOffer>
+>>>>>>> nahid
         </Route>
         <Route path="*">
           <NotFound />
