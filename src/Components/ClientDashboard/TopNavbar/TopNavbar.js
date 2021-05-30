@@ -27,6 +27,7 @@ const TopNavbar = () => {
                         <div id="mySidenav" className="sidenav">
                             <Link to="#" onClick={closeNav}>&times;</Link>
                             <Link to="/client-dashboard"> <i className="fas fa-th-large"></i>Client Dashboard</Link>
+                            <Link to="/post-job"> <i className="fas fa-briefcase"></i> Post A Jobs</Link>
                             <Link to="/client-jobs"> <i className="fas fa-briefcase"></i> Jobs</Link>
                             <Link to="/candidates"> <i className="fas fa-user"></i> Candidates</Link>
                             <Link to="/approval"> <i className="fas fa-user-check"></i> Approval</Link>

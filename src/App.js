@@ -8,6 +8,7 @@ import AppliedJobs from './Components/CandidateDashboard/AppliedJobs/AppliedJobs
 import CandidateDashboard from './Components/CandidateDashboard/CandidateDashboard/CandidateDashboard';
 import ClientDashboard from './Components/ClientDashboard/ClientDashboard/ClientDashboard';
 import ClientJob from './Components/ClientDashboard/ClientJob/ClientJob';
+import PostJob from './Components/ClientDashboard/PostJob/PostJob';
 import TopNavbar from './Components/ClientDashboard/TopNavbar/TopNavbar';
 import Login from './Components/Shared/Login/Login';
 import NotFound from './Components/Shared/NotFound/NotFound';
@@ -34,6 +35,9 @@ function App() {
         </Route>
         <Route path="/applied-jobs">
           <AppliedJobs></AppliedJobs>
+        </Route>
+        <Route path="/post-job">
+          <PostJob></PostJob>
         </Route>
         <Route path="*">
           <NotFound/>
