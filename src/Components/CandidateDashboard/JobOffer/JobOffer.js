@@ -6,7 +6,7 @@ import JobOfferDetails from '../JobOfferDetails/JobOfferDetails';
 const JobOffer = () => {
     const [jobOffers ,setJobOffers] = useState([])
     const loadData =() => {
-        fetch(`http://localhost:5000/allJobs`)
+        fetch(`https://serene-basin-34461.herokuapp.com/allJobs`)
         .then(response =>response.json())
         .then(data =>{
             console.log(data);

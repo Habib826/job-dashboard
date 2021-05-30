@@ -5,7 +5,7 @@ const PostJob = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
         console.log(data);
-        fetch(`http://localhost:5000/addJob`,{
+        fetch(`https://serene-basin-34461.herokuapp.com/addJob`,{
             method: 'POST',
             headers: {'content-type': 'application/json'},
             body: JSON.stringify(data)

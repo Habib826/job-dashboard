@@ -37,7 +37,7 @@ const Registration = () => {
                     addName()
                     if (user.email) {
 
-                        fetch(`http://localhost:5000/register`, {
+                        fetch(`https://serene-basin-34461.herokuapp.com/register`, {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify(newUserInfo)
