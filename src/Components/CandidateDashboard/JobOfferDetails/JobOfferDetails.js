@@ -1,13 +1,15 @@
 import React from 'react';
+import logo from '../../../images/job board.png'
 
 const JobOfferDetails = ({job}) => {
     return (
         <div className="col-md-10 border d-flex align-items-center justify-content-between">
             <div className="applied-job-left d-flex align-items-center">
-                <img src={job.image} alt="" />
+                <img src={logo} alt="" />
                 <div>
-                    <h4>{job.title}</h4>
-                    <p><span>{job.company}</span> <span>{job.location}</span> </p>
+                    <h3>{job.jobTitle}</h3>
+                    
+                    <small><span>Offered by <strong>{job.company}</strong></span><br /><span>{job.location}</span> </small>
                 </div>
             </div>
             
