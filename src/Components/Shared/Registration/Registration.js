@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 const Registration = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
-    console.log(formState);
     const onClientSubmit = (data) => console.log(data);
     const onCandidateSubmit = (data) => console.log(data);
     return (

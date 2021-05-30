@@ -13,10 +13,10 @@ const TopNavbar = () => {
         // document.getElementById("main").style.marginLeft = "0";
     }
     const history = useHistory();
-    const goToContact = ()=>{
+    const goToContact = () => {
         history.push('/contact')
     }
-    const goToHome = ()=>{
+    const goToHome = () => {
         history.push('/')
     }
     return (
@@ -43,13 +43,13 @@ const TopNavbar = () => {
 
                     <div className="d-flex align-items-center">
                         <span style={{ fontSize: '30px', cursor: 'pointer' }} onClick={openNav}>&#9776;</span>
-                        <img src={logo} alt="Job Board Logo" style={{width:'100px'}} onClick={goToHome}/>
+                        <img src={logo} alt="Job Board Logo" style={{ width: '100px' }} onClick={goToHome} />
                     </div>
                 </div>
                 <div className="col-md-9">
-                    <div className="topnav-right ml-auto d-flex align-items-center justify-content-center" style={{maxWidth:'300px'}}>
-                        <i className="fas fa-envelope"style={{fontSize:'30px',borderRight:'1px solid #000', paddingRight:'10px', cursor:'pointer'}} onClick={goToContact}></i>
-                        <img src={logo} alt="user" style={{width:'100px',borderRadius:'50%'}}/>
+                    <div className="topnav-right ml-auto d-flex align-items-center justify-content-center" style={{ maxWidth: '300px' }}>
+                        <i className="fas fa-envelope" style={{ fontSize: '30px', borderRight: '1px solid #000', paddingRight: '10px', cursor: 'pointer' }} onClick={goToContact}></i>
+                        <img src={logo} alt="user" style={{ width: '100px', borderRadius: '50%' }} />
                         <p>User Name</p>
                     </div>
                 </div>
